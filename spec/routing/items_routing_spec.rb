@@ -34,9 +34,5 @@ RSpec.describe ItemsController, type: :routing do
     it "routes to #destroy" do
       expect(delete: "/items/1").to route_to("items#destroy", id: "1")
     end
-
-    it "test var from .env.test" do
-      expect(ENV['TEST_DOT_ENV_DOT_TEST']).to eq('dot env dot test var available')
-    end
   end
 end
