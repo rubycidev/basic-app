@@ -16,6 +16,11 @@ RSpec.describe "items/show", type: :view do
     render
     expect(rendered).to match(/Name/)
   end
+
+  it "renders attributes in <p>" do
+    render
+    expect(rendered).to match(/Name/)
+  end
   it "renders attributes in <p>" do
     render
     expect(rendered).to match(/Name/)
