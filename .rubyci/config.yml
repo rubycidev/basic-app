@@ -1,8 +1,5 @@
-# root/ruby-ci.yml
-
 version: 1
 
 build_packs:
   nodejs_version:
-    # Available versions: [12..17]
     version: 18.17.1
