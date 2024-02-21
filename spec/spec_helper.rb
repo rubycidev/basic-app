@@ -27,6 +27,14 @@ if ENV["RUBY_CI_SECRET_KEY"]
 
   RSpec::Core::Runner.prepend(RubyCI::RunnerPrepend)
 end
+
+require 'simplecov'
+
+# SimpleCov::Formatter::HTMLFormatter, add as first in list of formatters if need
+SimpleCov.formatters = SimpleCov::Formatter::HTMLFormatter
+SimpleCov.start do
+  track_files "{app}/**/*.rb"
+end
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
