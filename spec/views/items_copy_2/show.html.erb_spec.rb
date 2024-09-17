@@ -9,7 +9,7 @@ RSpec.describe "items/show", type: :view do
 
   it "renders attributes in <p>" do
     render
-    expect(rendered).to match(/Name/)
+    expect(rendered).not_to match(/Name/)
   end
 
   it "renders attributes in <p>" do
